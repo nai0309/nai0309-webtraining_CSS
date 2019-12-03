@@ -16,26 +16,28 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
+  }
+  .flex-none{
+    flex:0 0 auto;
   }
   </style>
 </head>
 
-<body class="text-white">
+<body class="tex-dark font-weight-bolder">
     <div class="container-fluid">
-        <!-- <img src="https://picsum.photos/1200/2000/?random=1"> -->
-        <div class="row vh-100 vw-100 d-flex justify-content-center align-items-center flex-nowrap">
-            <div class="col h1 flex-sm-column">SCROLL</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:none">backdrop-filter: none</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:grayscale(1)">backdrop-filter: grayscale(1)</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:brightness(1.5)">backdrop-filter: brightness(1.5)</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:blur(5px)">backdrop-filter: blur(5px)</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:contrast(0.8)">backdrop-filter: contrast(0.8)</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:invert(0.7)">backdrop-filter: invert(0.7)</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:opacity(0.4)">backdrop-filter: opacity(0.4)</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:sepia(0.4)">backdrop-filter: sepia(0.4)</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:saturate(1.8)">backdrop-filter: saturate(1.8)</div>
-            <div class="col border text-nowrap flex-sm-column h-75" style="backdrop-filter:hue-rotate(120deg)">backdrop-filter: hue-rotate(120deg)</div>
+        <div class="row flex-column vh-100 d-flex align-items-center flex-nowrap">
+            <div class="col-auto h1 text-wrap w-25 flex-none flex-md-row">SCROLL</div>
+            <div class="col-auto border text-nowrap h-md-75 w-25 flex-none pt-2" style="backdrop-filter:none;">backdrop-filter: none</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:grayscale(1);">backdrop-filter: grayscale(1)</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:brightness(1.5)">backdrop-filter: brightness(1.5)</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:blur(5px)">backdrop-filter: blur(5px)</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:contrast(0.8)">backdrop-filter: contrast(0.8)</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:invert(0.7)">backdrop-filter: invert(0.7)</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:opacity(0.4)">backdrop-filter: opacity(0.4)</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:sepia(0.4)">backdrop-filter: sepia(0.4)</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:saturate(1.8)">backdrop-filter: saturate(1.8)</div>
+            <div class="col-auto border text-nowrap h-75 w-25 flex-none pt-2" style="backdrop-filter:hue-rotate(120deg)">backdrop-filter: hue-rotate(120deg)</div>
+            
         </div>
     </div>
 
