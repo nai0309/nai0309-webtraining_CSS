@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+
+</head>
+
+
+<body>
+    <!-- loading -->
+    <div class="progress">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"></div>
+    </div>
+    <!-- content -->
+    <div class="content">
+        <img class="img-fluid" src="https://picsum.photos/1920/1080/?random=1">
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $('#content').hide();
+        $(window).on('load', function () {
+            let loadingPerc = 0;
+            let loading = setInterval(() => {
+                if (loadingPerc >= 100) {
+                    clearInterval(loading);
+                    $('.progress').fadeOut();
+                    $('#content').fadeIn();
+                } else {
+                    loadingPerc += 1;
+                    $('.progress-bar').css({
+                        width: loadingPerc + '%',
+                    });
+                    $('.progress-bar').text(loadingPerc + '%');
+                }
+            }, 50);
+        });
+    </script>
+
+
+</body>
+
+</html>
