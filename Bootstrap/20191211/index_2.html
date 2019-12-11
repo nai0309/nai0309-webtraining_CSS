@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Bootstrap 191211 layout_橫向</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="../css/all.css" />
+
+    <style>
+        @media (min-width: 1200px) {
+            #left {
+                width: 20%;
+                height: 100%;
+                position: fixed;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            #right {
+                width: 80%;
+                margin-left: 20%;
+            }
+        }
+
+        @media (max-width: 575px) {
+            #left {
+                display: flex;
+                flex-direction: column;
+            }
+            #right {
+                width: 100%;
+                margin-top: 13px;                
+            }
+            body{
+                background-color: #28a745;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid" style="height: 100vh;">
+        <div class="row">
+            <!-- 左側 -->
+            <div id="left" class="text-white bg-success" style="z-index: 9999;">
+                <div class="container-fluid d-flex flex-column align-items-center">
+                    <!-- name -->
+                    <h2 class="pt-3">NaiHui's Blog</h2>
+                    <!-- profile pic -->
+                    <img class="rounded-circle py-3" src="https://picsum.photos/100/100/?random=1">
+                    <!-- profile intro -->
+                    <p class="py-3 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto
+                        inventore officia sunt! Nemo ipsum necessitatibus esse omnis repellat saepe, sed corporis
+                        cupiditate, quibusdam dicta dolore!</p>
+                    <!-- contact icon -->
+                    <div class="row d-flex justify-content-around w-75">
+                        <a href="#"><i class="fab fa-twitter-square h2 text-warning"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g h2 text-warning"></i></a>
+                        <a href="#"><i class="fab fa-facebook h2 text-warning"></i></a>
+                        <a href="#"><i class="fab fa-instagram h2 text-warning"></i></a>
+                        <a href="#"><i class="fas fa-envelope-square h2 text-warning"></i></a>
+                    </div>
+                    <hr style="height: -1px !important;background: white !important; width: 100%;">
+                    <div class="row d-flex flex-column">
+                        <h4 class="font-weight-normal pt-3">Blog Home</h4>
+                        <h4 class="font-weight-normal pt-3">Blog Post</h4>
+                        <h4 class="font-weight-normal pt-3">About Me</h4>
+                    </div>
+                    <div class="m-3">
+                        <button class="btn btn-outline-light btn-lg">Get in touch</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 右側 -->
+            <div id="right">
+                <!-- 幻燈片 -->
+                <div class="container-fluid">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://picsum.photos/1920/400/?random=1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/1920/400/?random=2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/1920/400/?random=3">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- media object 1 -->
+                    <div class="media my-3">
+                        <img class="mr-3" src="https://picsum.photos/100/100/?random=1">
+                        <div class="media-body">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum aliquam vitae vero
+                            laborum illo earum vel harum neque fugit eius consequatur possimus, ullam ratione minus,
+                            unde corporis accusantium asperiores maiores! Ut deserunt provident incidunt culpa. Enim
+                            quos rerum in.
+                        </div>
+                    </div>
+                    <!-- media object 2 -->
+                    <div class="media my-3">
+                        <img class="mr-3" src="https://picsum.photos/100/100/?random=2">
+                        <div class="media-body">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum aliquam vitae vero
+                            laborum illo earum vel harum neque fugit eius consequatur possimus, ullam ratione minus,
+                            unde corporis accusantium asperiores maiores! Ut deserunt provident incidunt culpa. Enim
+                            quos rerum in.
+                        </div>
+                    </div>
+                    <!-- media object 3 -->
+                    <div class="media my-3">
+                        <img class="mr-3" src="https://picsum.photos/100/100/?random=3">
+                        <div class="media-body">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum aliquam vitae vero
+                            laborum illo earum vel harum neque fugit eius consequatur possimus, ullam ratione minus,
+                            unde corporis accusantium asperiores maiores! Ut deserunt provident incidunt culpa. Enim
+                            quos rerum in.
+                        </div>
+                    </div>
+                    <!-- media object 4 -->
+                    <div class="media my-3">
+                        <img class="mr-3" src="https://picsum.photos/100/100/?random=4">
+                        <div class="media-body">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum aliquam vitae vero
+                            laborum illo earum vel harum neque fugit eius consequatur possimus, ullam ratione minus,
+                            unde corporis accusantium asperiores maiores! Ut deserunt provident incidunt culpa. Enim
+                            quos rerum in.
+                        </div>
+                    </div>
+                    <!-- media object 5 -->
+                    <div class="media my-3">
+                        <img class="mr-3" src="https://picsum.photos/100/100/?random=5">
+                        <div class="media-body">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum aliquam vitae vero
+                            laborum illo earum vel harum neque fugit eius consequatur possimus, ullam ratione minus,
+                            unde corporis accusantium asperiores maiores! Ut deserunt provident incidunt culpa. Enim
+                            quos rerum in.
+                        </div>
+                    </div>
+                    <!-- media object 6 -->
+                    <div class="media my-3">
+                        <img class="mr-3" src="https://picsum.photos/100/100/?random=6">
+                        <div class="media-body">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum aliquam vitae vero
+                            laborum illo earum vel harum neque fugit eius consequatur possimus, ullam ratione minus,
+                            unde corporis accusantium asperiores maiores! Ut deserunt provident incidunt culpa. Enim
+                            quos rerum in.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
