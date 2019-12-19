@@ -1,8 +1,10 @@
 /* body */
 body{
-    background-image: url("../img/colorful-bg.jpg");
-    background-size: cover;
+    background-image: url("../img/colorful-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Patrick Hand', cursive;
 }
 
 #outBox{
@@ -14,6 +16,11 @@ body{
     height: 350px;
     width: 430px;
     margin: 10px auto;
+}
+
+#RGBToHex{
+    font-size: 3.5rem;
+    padding: 0;
 }
 
 /* input range */

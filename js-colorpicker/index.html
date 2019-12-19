@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>js_colorpicker</title>
-    <!-- bg img -->
-    <!-- <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by pikisuperstar - www.freepik.com</a> -->
+
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <!-- custom css -->
@@ -18,39 +22,92 @@
       class="container vh-100 d-flex flex-column justify-content-center align-items-center"
     >
       <div id="outBox" class="bg-white">
-        <div id="inBox" class="border border-secondary"></div>
-        <div id="colorTxt" class="card-body text-center h1 bg-info">#000</div>
-      </div>
+        <div id="inBox"></div>
 
-      <!-- red range start -->
+        <div id="RGBToHex" class="card-body text-center font-weight-bolder"><button class="btn btn-sm btn-outline-warning mx-5" value="">+</button>#000000<button class="btn btn-sm btn-outline-warning mx-5" value="">-</button></div>
+      </div>
+      <form>
+      <!-- 紅色滑動條 start -->
       <div id="red" class="clrNum mt-2">
         <span class="h4 r">R｜</span>
-        <input type="number" />
+        <input
+          id="inputR"
+          type="number"
+          value="0"
+          min="0"
+          max="255"
+          oninput="inputClr()"
+        />
         <span class="mr-2 h6">0</span>
-        <input id="redRan" type="range" min="0" max="255" step="1" class="slider" onchange="rangeVal()" value=""/>
+        <input
+          id="redRan"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          class="slider"
+          onchange="rangeVal()"
+          value="0"
+        />
         <span class="ml-2 h6">255</span>
       </div>
-        <!-- red range end -->
+      <!-- 紅色滑動條 end -->
 
-        <!-- green range start -->
+      <!-- 綠色滑動條 start -->
       <div id="green" class="clrNum mt-2">
         <span class="h4 g">G｜</span>
-        <input type="number" />
+        <input
+          id="inputG"
+          type="number"
+          value="0"
+          min="0"
+          max="255"
+          oninput="inputClr()"
+        />
         <span class="mr-2 h6">0</span>
-        <input id="greenRan" type="range" min="0" max="255" step="1" class="slider" onchange="rangeVal()" value=""/>
+        <input
+          id="greenRan"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          class="slider"
+          onchange="rangeVal()"
+          value="0"
+        />
         <span class="ml-2 h6">255</span>
       </div>
-      <!-- green range end -->
+      <!-- 綠色滑動條 end -->
 
-      <!-- blue range start -->
+      <!-- 藍色滑動條 start -->
       <div id="blue" class="clrNum mt-2">
         <span class="h4 b">B｜</span>
-        <input type="number" />
+        <input
+          id="inputB"
+          type="number"
+          value="0"
+          min="0"
+          max="255"
+          oninput="inputClr()"
+        />
         <span class="mr-2 h6">0</span>
-        <input id="blueRan" type="range" min="0" max="255" step="1" class="slider" onchange="rangeVal()" value=""/>
+        <input
+          id="blueRan"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          class="slider"
+          onchange="rangeVal()"
+          value="0"
+        />
         <span class="ml-2 h6">255</span>
       </div>
-      <!-- blue range end -->
+      <!-- 藍色滑動條 end -->
+      <div class="d-flex justify-content-center py-3">
+      <button id="reset" class="btn btn-outline-dark btn-sm " type="reset" onclick="resetAll()">重置</button>
+    </div>
+    </form>
     </div>
 
     <!-- bootstrap -->
@@ -61,14 +118,64 @@
       const red = document.getElementById("redRan");
       const green = document.getElementById("greenRan");
       const blue = document.getElementById("blueRan");
-      const clrPick= document.getElementsById("inBox");
+      const clrPick = document.getElementById("inBox");
+      const hexTxt = document.getElementById("RGBToHex");
 
-      function rangeVal(val) {
-          let valR=red.value;
-          let valG=green.value;
-          let valB=blue.value;
-       clrPick.style.backgroundColor=`rgb(${valR},${valG},${valB})`;
+        // inBox最初的顏色
+      clrPick.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`;
+
+      function RGBToHex(clr) {
+        return clr.length == 1 ? "0" + clr : clr;
       }
+
+      // 滑動條控制數字＆顏色
+      function rangeVal(val) {
+        let valR = red.value;
+        let valG = green.value;
+        let valB = blue.value;
+        clrPick.style.backgroundColor = `rgb(${valR},${valG},${valB})`;
+        let hexR = Number(valR).toString(16);
+        let hexG = Number(valG).toString(16);
+        let hexB = Number(valB).toString(16);
+        hexTxt.innerHTML = `#${RGBToHex(hexR).toUpperCase()}${RGBToHex(hexG).toUpperCase()}${RGBToHex(hexB).toUpperCase()}`;
+        $(inputR).val(red.value);
+        $(inputG).val(green.value);
+        $(inputB).val(blue.value);
+      }
+
+      const inputR = document.getElementById("inputR");
+      const inputG = document.getElementById("inputG");
+      const inputB = document.getElementById("inputB");
+
+    // 輸入數字控制數字＆顏色
+      function inputClr(val) {
+        let valR = Number(inputR.value);
+        let valG = Number(inputG.value);
+        let valB = Number(inputB.value);
+        if (valR > 255 || valG > 255 || valB > 255) {
+          alert("請輸入0~255之間的數值");
+        } else {
+          clrPick.style.backgroundColor = `rgb(${valR},${valG},${valB})`;
+          let hexR = valR.toString(16);
+          let hexG = valG.toString(16);
+          let hexB = valB.toString(16);
+          hexTxt.innerHTML = `#${RGBToHex(hexR).toUpperCase()}${RGBToHex(hexG).toUpperCase()}${RGBToHex(hexB).toUpperCase()}`;
+          $(red).val(inputR.value);
+          $(green).val(inputG.value);
+          $(blue).val(inputB.value);
+        }
+      }
+
+    //點擊重置按鈕：色塊＆hex設定為黑色 
+    //   function resetAll(){
+    //     clrPick.style.backgroundColor ="#000000";
+    //     document.getElementById('RGBToHex').innerHTML="#000000";
+    //   };
+
+    //點擊重置按鈕：整個頁面reload 
+      function resetAll(){
+        location.reload();
+      };
 
     </script>
   </body>
