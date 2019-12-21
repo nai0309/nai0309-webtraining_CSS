@@ -70,3 +70,6 @@ body{
     margin: 0 5px;
 } 
   
+#resetBtn{
+    font-family: 'Noto Serif TC', serif;
+}
