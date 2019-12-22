@@ -7,6 +7,13 @@ body{
     font-family: 'Patrick Hand', cursive;
 }
 
+#topTxt{
+    font-size: 3rem;
+    font-style: italic;
+    color: white;
+    text-shadow:3px 3px tomato;
+}
+
 #outBox{
     height: 470px;
     width: 450px;
@@ -16,11 +23,17 @@ body{
     height: 350px;
     width: 430px;
     margin: 10px auto;
+    box-shadow: 3px 5px 8px rgba(92, 92, 92, 0.899);
 }
 
 #RGBToHex{
     font-size: 3.5rem;
-    padding: 0;
+    padding: 0 20px;
+}
+
+#hexTxt{
+    display: inline;
+    padding: 0 10px;
 }
 
 /* input range */
@@ -70,6 +83,6 @@ body{
     margin: 0 5px;
 } 
   
-#resetBtn{
+.zh-font{
     font-family: 'Noto Serif TC', serif;
 }
