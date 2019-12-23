@@ -59,17 +59,8 @@
     document.getElementsByClassName("sec")[0].style.transform = `rotate(${s}deg)`;
   }
 
-  function onhour() {
-    time = new Date();
-    getsec = time.getSeconds();
-    getmin = time.getMinutes();
-    if (getmin == 0 && getsec ==0) {
-      alert(123);
-    }
-  }
 
   var run = setInterval(clock, 1000);
-  var animation = setInterval(onhour, 1000);
 
 </script>
 
