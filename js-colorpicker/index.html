@@ -7,17 +7,26 @@
     <title>js_colorpicker</title>
 
     <!-- google font -->
+<<<<<<< Updated upstream
+=======
+    <!-- chinese -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+>>>>>>> Stashed changes
     <!-- english -->
     <link
       href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap"
       rel="stylesheet"
     />
+<<<<<<< Updated upstream
     <!-- chinese -->
     <link
       href="https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap"
       rel="stylesheet"
     />
 
+=======
+    
+>>>>>>> Stashed changes
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <!-- custom css -->
@@ -46,6 +55,7 @@
         </div>
       </div>
       <form>
+<<<<<<< Updated upstream
         <!-- 紅色滑動條 start -->
         <div id="red" class="clrNum mt-2">
           <span class="h4 r">R｜</span>
@@ -134,6 +144,89 @@
           </button>
         </div>
       </form>
+=======
+      <!-- 紅色滑動條 start -->
+      <div id="red" class="clrNum mt-2">
+        <span class="h4 r">R｜</span>
+        <input
+          id="inputR"
+          type="number"
+          value="0"
+          min="0"
+          max="255"
+          oninput="inputClr()"
+        />
+        <span class="mr-2 h6">0</span>
+        <input
+          id="redRan"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          class="slider"
+          onchange="rangeVal()"
+          value="0"
+        />
+        <span class="ml-2 h6">255</span>
+      </div>
+      <!-- 紅色滑動條 end -->
+
+      <!-- 綠色滑動條 start -->
+      <div id="green" class="clrNum mt-2">
+        <span class="h4 g">G｜</span>
+        <input
+          id="inputG"
+          type="number"
+          value="0"
+          min="0"
+          max="255"
+          oninput="inputClr()"
+        />
+        <span class="mr-2 h6">0</span>
+        <input
+          id="greenRan"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          class="slider"
+          onchange="rangeVal()"
+          value="0"
+        />
+        <span class="ml-2 h6">255</span>
+      </div>
+      <!-- 綠色滑動條 end -->
+
+      <!-- 藍色滑動條 start -->
+      <div id="blue" class="clrNum mt-2">
+        <span class="h4 b">B｜</span>
+        <input
+          id="inputB"
+          type="number"
+          value="0"
+          min="0"
+          max="255"
+          oninput="inputClr()"
+        />
+        <span class="mr-2 h6">0</span>
+        <input
+          id="blueRan"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          class="slider"
+          onchange="rangeVal()"
+          value="0"
+        />
+        <span class="ml-2 h6">255</span>
+      </div>
+      <!-- 藍色滑動條 end -->
+      <div class="d-flex justify-content-center py-3">
+      <button id="reset" class="btn btn-outline-dark btn-sm btn-txt" type="reset" onclick="resetAll()">重置</button>
+    </div>
+    </form>
+>>>>>>> Stashed changes
     </div>
 
     <!-- bootstrap -->

@@ -10,9 +10,9 @@ body {
   height: 550px;
   background: url("../img/clock_bg.png");
   border-radius: 50%;
-  border: 20px solid cornsilk;
+  border: 10px solid cornsilk;
   z-index: 9999;
-  box-shadow: 3px 3px 5px cornsilk;
+  box-shadow: 3px 3px 16px cornsilk;
   position: relative;
 }
 
@@ -22,6 +22,7 @@ body {
   background: url("../img/hh.png");
   position: absolute;
   left: 45%;
+  bottom: -2%;
 }
 .min {
   width: 35px;
@@ -29,6 +30,7 @@ body {
   background: url("../img/mm.png");
   position: absolute;
   left: 45%;
+  bottom: -2%;
 }
 .sec {
   width: 35px;
@@ -36,4 +38,5 @@ body {
   background: url("../img/ss.png");
   position: absolute;
   left: 45%;
+  bottom: -2%;
 }

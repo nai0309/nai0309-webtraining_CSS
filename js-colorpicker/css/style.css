@@ -83,6 +83,12 @@ body{
     margin: 0 5px;
 } 
   
+<<<<<<< Updated upstream
 .zh-font{
     font-family: 'Noto Serif TC', serif;
+=======
+.btn-txt{
+    font-family: 'Noto Serif TC', serif;
+    font-weight:bolder ;
+>>>>>>> Stashed changes
 }
