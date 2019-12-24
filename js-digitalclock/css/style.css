@@ -5,41 +5,40 @@ body {
   background: #b2c8f9;
 }
 
-.box{
+.box {
   width: 300px;
   height: 300px;
   border: 5px solid cornsilk;
   border-radius: 50%;
-  position:absolute;
   text-align: center;
   line-height: 300px;
 }
 
-#day{
+/* #day {
   margin-top: 310px;
 }
-#hour{
+#hour {
   margin-top: 620px;
 }
-#min{
+#min {
   margin-top: 930px;
 }
-#sec{
+#sec {
   margin-top: 1240px;
-}
+} */
 
 @media (max-width: 576px) {
-  .box{
+  .box {
     width: 200px;
-  height: 200px;
+    height: 200px;
   }
 }
 
 @media (min-width: 768px) {
-  }
+}
 
 @media (min-width: 992px) {
-  }
+}
 
 @media (min-width: 1200px) {
-  }
+}
