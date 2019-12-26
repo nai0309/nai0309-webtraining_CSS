@@ -1,44 +1,124 @@
-body {
-  width: 100vw;
-  height: 100vh;
+* {
+  margin: 0 auto;
+  padding: 0;
   box-sizing: border-box;
-  background: #b2c8f9;
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;
 }
 
-.box {
-  width: 300px;
-  height: 300px;
-  border: 5px solid cornsilk;
-  border-radius: 50%;
+h1 {
+  width: 100%;
+  height: 4rem;
+  background: #000000;
+  color: white;
   text-align: center;
-  line-height: 300px;
+  line-height: 4rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff, 0 0 20px rgb(249, 245, 217),
+    0 0 30px rgb(240, 29, 29);
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+.countdown {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* #day {
-  margin-top: 310px;
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  
 }
-#hour {
-  margin-top: 620px;
+.runh{
+  animation: runh 86400s linear infinite;
 }
-#min {
-  margin-top: 930px;
+.runm{
+  animation: runm 3600s linear infinite;
 }
-#sec {
-  margin-top: 1240px;
+.runs{
+  animation: runs 60s linear infinite;
+}
+
+.timepie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 206, 198);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  font-size: 3rem;
+  animation: timepie 2s linear infinite;
+}
+
+.day{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* @keyframes runs {
+  to {
+    background: conic-gradient(white 0, tomato 0);
+  }
+  20% {
+    background: conic-gradient(white 20%, tomato 0);
+  }
+  40% {
+    background: conic-gradient(white 40%, tomato 0);
+  }
+  60% {
+    background: conic-gradient(white 60%, tomato 0);
+  }
+  80% {
+    background: conic-gradient(white 80%, tomato 0);
+  }
+  from {
+    background: conic-gradient(white 100%, tomato 0);
+  }
 } */
 
-@media (max-width: 576px) {
-  .box {
-    width: 200px;
-    height: 200px;
+/*
+@keyframes timepie {
+  0% {
+    box-shadow: 0 0 20px #fff;
+  }
+  100% {
+    box-shadow: 0 0 0px #fff;
+  }
+} */
+
+@media (max-width:520px){
+  h1{
+    height: 6rem;
+    font-size: 1rem;
+    line-height: 3rem;
+  }
+  .countdown {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  .timer{
+    height: 180px;
+    width: 180px;
+    margin: 10px 0;
+  }
+  .timepie{
+    height: 160px;
+    width: 160px;
   }
 }
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
-}
+/* @media (max-width:720px){
+  h1{
+    height: 6rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+} */
