@@ -8,65 +8,30 @@
   <title>js-digitalclock</title>
 
   <!-- google font -->
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <!-- custom css -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Monoton|Sigmar+One&display=swap" rel="stylesheet">  <!-- custom css -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <script>
-    
-    var time=new Date();
-    var year=time.getUTCFullYear();
-    var deadline=new Date(`01/01/${year+1}`);
-    var nowtime=new Date();
-    var getdead=deadline.getTime();
-    var getnow=nowtime.getTime();
-    var diff=getdead-getnow;
-    var s=Math.floor((diff/1000)%60);
-    var m=Math.floor((diff/1000/60)%60);
-    var h=Math.floor((diff/1000/60/60)%24);
-    var d=Math.floor(diff/1000/60/60/24);
-    
-    document.write(`
-      <style>
-      @keyframes runs {
-        from {background: conic-gradient(white ${s}%, tomato 0)}
-        to {background: conic-gradient(white ${s-4}%, tomato 0);}
-      }
-    </style>
-    `);
-
-  </script>
 </head>
 
 <body>
 
   <section>
-    <h1>countdown to 2020 New Year's Eve</h1>
-      <div class="countdown">
-        <div class="timer runh">
-          <div class="timepie hour"></div>
-        </div>
-        <div class="timer runm">
-          <div class="timepie min"></div>
-        </div>
-        <div class="timer runs">
-          <div class="timepie sec"></div>
-        </div>
-      </div>
-      <div class="day"></div>
+    <h1></h1>
+    <div class="container">
+    <div class="day"></div>
+    <div class="countdown">
+        <div class="timepie hour"></div>
+        <div class="timepie min"></div>
+        <div class="timepie sec"></div>
+    </div>
+    <div class="left">left</div>
+  </div>
   </section>
 
-  <!-- bootstrap -->
   <script src="js/jquery-3.4.1.min.js"></script>
 
   <script>
     var time=new Date();
     var year=time.getUTCFullYear();
-    /*初始先ON一遍DOM*/
-    document.getElementsByClassName('timer')[0].style.background=`white ${h}%, tomato 0);`;
-    document.getElementsByClassName('timer')[1].style.background=`white ${m}%, tomato 0);`;
-    document.getElementsByClassName('timer')[2].style.background=`white ${s}%, tomato 0);`;
-   
 
     function countdown(){
       let deadline=new Date(`01/01/${year+1}`);
@@ -80,10 +45,12 @@
       let d=Math.floor(diff/1000/60/60/24);
       let day=(d==1)?"day":"days";
      
-      $('.day').html(`<i><span style="font-size:8rem">${d} </span> ${day} left</i>`);
+      $('.day').html(`<i><span>${d} </span> ${day} and</i>`);
       $('.hour').text(`${h} hr`);
       $('.min').text(`${m} min`);
       $('.sec').text(`${s} sec`);
+      $('h1').text(`countdown to ${year+1} New Year's Eve`);
+
       
     }
 
@@ -96,5 +63,5 @@
 
 
 
-
+</body>
 </html>

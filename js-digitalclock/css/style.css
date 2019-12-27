@@ -2,123 +2,111 @@
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
-  height: 100vh;
+  background: #2d2d2d;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  /* font-family: 'Monoton', cursive; */
+  font-family: "Sigmar One", cursive;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+section {
+  height: 80%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 3px 3px 0px tomato, 6px 6px 0px rgb(241, 229, 89),0px 0px 10px white;
+  letter-spacing: 4px;
+  height: 100%;
 }
 
 h1 {
+  /* font-family: 'Josefin Sans', sans-serif; */
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 4rem;
-  background: #000000;
+  height: auto;
   color: white;
   text-align: center;
   line-height: 4rem;
   text-transform: uppercase;
-  text-shadow: 0 0 10px #fff, 0 0 20px rgb(249, 245, 217),
-    0 0 30px rgb(240, 29, 29);
+  text-shadow: 1.5px 1.5px 1.5px rgb(21, 21, 21), 0 0 4px rgb(173, 171, 171), 0 0 12px rgb(249, 245, 217),
+    0 0 16px rgb(37, 77, 180);
   font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 3px;
-}
-.countdown {
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: 100;
+  letter-spacing: 5px;
+  /* border-bottom:0.1rem solid white; */
+  box-shadow: 0 2px 5px rgb(173, 171, 171), 0 4px 15px rgb(249, 245, 217),
+    0 6px 20px rgb(37, 77, 180);
 }
 
-.timer {
+.left {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  text-shadow: 2px 2px 0px tomato, 3px 3px 0px rgb(241, 229, 89),4px 4px 5px rgb(0, 0, 0),0px 0px 10px white;
+}
+
+.countdown {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 100% 0 0 100% / 50% 0 0 50%;
-  
-}
-.runh{
-  animation: runh 86400s linear infinite;
-}
-.runm{
-  animation: runm 3600s linear infinite;
-}
-.runs{
-  animation: runs 60s linear infinite;
+  animation: sec 1s linear infinite;
 }
 
 .timepie {
+  color: aliceblue;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 206, 198);
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 300px;
   font-size: 3rem;
   animation: timepie 2s linear infinite;
 }
 
-.day{
+.day {
+  color: aliceblue;
+  margin-top: 1rem;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  background: none;
+}
+.day span {
+  font-size: 8rem;
+  background: none;
 }
 
-/* @keyframes runs {
-  to {
-    background: conic-gradient(white 0, tomato 0);
+@keyframes sec{
+  from{
+    text-shadow: 3px 3px 0px tomato, 6px 6px 0px rgb(165, 89, 241),0px 0px 5px white;
+  }to{
+    text-shadow: 3px 3px 0px rgb(241, 229, 89), 6px 6px 0px tomato ,0px 0px 20px white;
   }
-  20% {
-    background: conic-gradient(white 20%, tomato 0);
-  }
-  40% {
-    background: conic-gradient(white 40%, tomato 0);
-  }
-  60% {
-    background: conic-gradient(white 60%, tomato 0);
-  }
-  80% {
-    background: conic-gradient(white 80%, tomato 0);
-  }
-  from {
-    background: conic-gradient(white 100%, tomato 0);
-  }
-} */
+}
 
-/*
-@keyframes timepie {
-  0% {
-    box-shadow: 0 0 20px #fff;
-  }
-  100% {
-    box-shadow: 0 0 0px #fff;
-  }
-} */
-
-@media (max-width:520px){
-  h1{
-    height: 6rem;
-    font-size: 1rem;
+@media (max-width: 520px) {
+  h1 {
+    height: auto;
+    font-size: 1.5rem;
     line-height: 3rem;
   }
   .countdown {
     flex-direction: column;
     margin: 1rem 0;
   }
-  .timer{
-    height: 180px;
-    width: 180px;
-    margin: 10px 0;
+  .left {
+    margin: 0;
   }
-  .timepie{
-    height: 160px;
-    width: 160px;
+  .container {
+    height: auto;
+  }
+  .day {
+    margin: 0;
+    height: 170px;
   }
 }
-/* @media (max-width:720px){
-  h1{
-    height: 6rem;
-    font-size: 2rem;
-    line-height: 3rem;
-  }
-} */
